@@ -9,12 +9,12 @@ from pathlib import Path
 st.set_page_config(
      page_title="Compare Drug Harms",
      page_icon="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png",
-     layout="wide",
+     layout="centered", #centered wide
      initial_sidebar_state="expanded",
      menu_items={
-         'Get Help': 'https://www.extremelycoolapp.com/help',
-         'Report a bug': "https://www.extremelycoolapp.com/bug",
-         'About': "# This is a header. This is an *extremely* cool app!"
+         'Get Help': 'https://github.com/franasal/MCDA-drug-harms',
+         'Report a bug': "https://github.com/franasal/MCDA-drug-harms",
+         'About': "# Author: franasa. \n @ViewsOnDrugsBot https://twitter.com/franarsa/"
      }
  )
 
@@ -65,21 +65,22 @@ def create_plot(sel_substances, sel_categories):
 
 def main():
 
+    col1, col2 = st.columns(2)
+
     end_drug_list = drug_list
     end_categories_list = categories_list
 
+    with col1:
+        st.markdown("###  ① ** Pick some Drugs: **")
+        st.text("Select at least two substances")
+        substances = st.multiselect("", drug_list, [])
+        st.markdown("###  :pill: :tea: :mushroom: :herb: :lollipop: :diamond_shape_with_a_dot_inside: :smoking: :horse_racing::syringe: :coffee: :wine_glass: :candy:")
 
-    st.markdown("###  ① ** Pick some Drugs: **")
-    st.markdown("###  :pill: :tea: :mushroom: :herb: :lollipop: :diamond_shape_with_a_dot_inside: :smoking: :horse_racing::syringe: :coffee: :wine_glass: :candy:")
+    with col2:
+        st.markdown("### ② **Choose some harm categories:**")
+        sel_categories = st.multiselect("",categories.keys(), [])
 
-    substances = st.multiselect("", drug_list, []
-    )
-
-    st.markdown("### ② **Choose some harm categories:**")
-    sel_categories = st.multiselect("",categories.keys(), []
-    )
-
-    if substances:
+    if substances and len(substances)>1:
         end_drug_list = substances
     if sel_categories:
         end_categories_list = [categories[x][1] for x in sel_categories]
