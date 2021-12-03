@@ -74,7 +74,7 @@ def main():
         st.markdown("###  ① ** Pick some Drugs: **")
         st.text("Select at least two substances")
         substances = st.multiselect("", drug_list, [])
-        st.markdown("###  :pill: :tea: :mushroom: :herb: :lollipop: :diamond_shape_with_a_dot_inside: :smoking: :horse_racing::syringe: :coffee: :wine_glass: :candy:")
+        st.markdown("#####  :pill: :candy: :broccoli: :tea: :mushroom: :snowflake: :smoking: :horse_racing::syringe: :wine_glass:")
 
     with col2:
         st.markdown("### ② **Choose harm categories:**")
