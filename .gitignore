@@ -1,4 +1,3 @@
 *.ipnyb*
 *.pdf
-/nutts
-
+**/nutts
