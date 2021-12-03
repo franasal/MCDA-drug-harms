@@ -77,7 +77,7 @@ def main():
         st.markdown("###  :pill: :tea: :mushroom: :herb: :lollipop: :diamond_shape_with_a_dot_inside: :smoking: :horse_racing::syringe: :coffee: :wine_glass: :candy:")
 
     with col2:
-        st.markdown("### ② **Choose some harm categories:**")
+        st.markdown("### ② **Choose harm categories:**")
         sel_categories = st.multiselect("",categories.keys(), [])
 
     if substances and len(substances)>1:
