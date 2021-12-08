@@ -7,6 +7,6 @@ This app explores data from ***David J Nutt et al 2010 [ research paper](https:/
 The paper and the dataset are available [here](https://drugscience.org.uk/wp-content/uploads/2010/04/MCDA_Lancet_1-11-10.pdf) and in the link above.
 
 
-To see the deployed app go to:
+To see the deployed app visit:
 
-https://share.streamlit.io/franasal/mcda-drug-harms/main/drugs_app.py
+https://share.streamlit.io/franasal/mcda-drug-harms/
