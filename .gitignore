@@ -1,3 +1,4 @@
 *.ipynb*
 *.pdf
 **/nutts
+__pycache__
