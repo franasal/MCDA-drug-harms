@@ -33,7 +33,6 @@ def create_plot(sel_substances, sel_categories):
 
 def main():
 
-    # st.title()
     intro_markdown = Path("es_info.md").read_text()
     st.markdown(intro_markdown, unsafe_allow_html=True)
 

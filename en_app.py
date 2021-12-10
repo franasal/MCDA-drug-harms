@@ -34,7 +34,7 @@ def create_plot(sel_substances, sel_categories):
 
 def main():
 
-    intro_markdown = Path("info.md").read_text()
+    intro_markdown = Path("en_info.md").read_text()
     st.markdown(intro_markdown, unsafe_allow_html=True)
 
     st.write("##")
