@@ -7,9 +7,8 @@ from pathlib import Path
 
 
 
-
 def load_data():
-    path_ = "./data/Input criterion weights and drug scores.xlsx"
+    path_ = "./data/Input_criterion_weights_and_drug_scores_Mulit_lan.xlsx"
     dataset = pd.read_excel(path_, sheet_name=2)
     descriptions = pd.read_excel(path_, sheet_name=3).to_dict("series")
     categories = {descriptions[x][0]:[descriptions[x][1], x]for x in descriptions}
@@ -46,7 +45,7 @@ def main():
 
     with col1:
         st.markdown("###  ① ** Elije algunas Drogas: **")
-        st.text("Selecciona por lo memos dos sustancias")
+        st.text("Selecciona por lo menos dos sustancias")
         substances = st.multiselect("", drug_list, [])
         st.markdown("#####  :pill: :candy: :broccoli: :tea: :mushroom: :snowflake: :smoking: :horse_racing::syringe: :wine_glass:")
 
@@ -79,9 +78,8 @@ def main():
     chart_placeholder.altair_chart(fig, use_container_width=True)
 
 
-    header = '#### Un proyecto desarrollado por [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
-    st.markdown(header, unsafe_allow_html=True)
-    st.markdown("<a href='#linkto_top'>Link to top</a>", unsafe_allow_html=True)
+    foot = '#### Un proyecto desarrollado por [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
+    st.markdown(foot, unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

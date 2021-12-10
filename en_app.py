@@ -6,12 +6,8 @@ import altair as alt
 from pathlib import Path
 
 
-
-# st.title("**[David Nutt's dangerous drug list](https://www.theguardian.com/science/2009/nov/02/david-nutt-dangerous-drug-list)**")
-
-# @st.cache
 def load_data():
-    path_ = "./data/Input criterion weights and drug scores.xlsx"
+    path_ = "./data/Input_criterion_weights_and_drug_scores_Mulit_lan.xlsx"
     dataset = pd.read_excel(path_, sheet_name=0)
     descriptions = pd.read_excel(path_, sheet_name=1).to_dict("series")
     categories = {descriptions[x][0]:[descriptions[x][1], x]for x in descriptions}
@@ -19,7 +15,6 @@ def load_data():
     return dataset.drop(16).T, categories
 
 
-# display(datasets_dict['Input_criterion_weights_and_drug_scores'])
 transposed_2, categories=load_data()
 
 transposed_2.columns = transposed_2.iloc[0]
@@ -84,9 +79,8 @@ def main():
     chart_placeholder.altair_chart(fig, use_container_width=True)
 
 
-    header = '#### A project by  [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
-    st.markdown(header, unsafe_allow_html=True)
-    st.markdown("<a href='#linkto_top'>Link to top</a>", unsafe_allow_html=True)
+    foot = '#### A project by  [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
+    st.markdown(foot, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
