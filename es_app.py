@@ -14,6 +14,7 @@ def load_data(lang):
 
     indexes=labels_df[f'{lang}_VARIABLE'].dropna().tolist()
     col_names=labels_df[f'{lang}_DRUG'].dropna().tolist()
+    lab_names=labels_df[f'{lang}_LABELS'].dropna().tolist()
 
     data=pd.read_excel(path_ , header=None, sheet_name='input_table').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
     data.index = list(indexes)
@@ -21,10 +22,10 @@ def load_data(lang):
     descriptions = pd.read_excel(path_,sheet_name='descriptions')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
 
 
-    return data.drop(16).T, descriptions
+    return data.drop(16).T, descriptions, lab_names
 
 
-transposed_df, categories=load_data(lang)
+transposed_df, categories, lab_names=load_data(lang)
 
 transposed_df.columns = transposed_df.iloc[0]
 transposed_df.columns.name = "Category"
@@ -51,13 +52,13 @@ def main():
     col1, col2 = st.columns(2)
 
     with col1:
-        st.markdown("###  ① ** Pick some Drugs: **")
-        st.text("Select at least two substances")
+        st.markdown(f"###  ① ** {lab_names[0]}: **")
+        st.text(f"{lab_names[1]}")
         substances = st.multiselect("", drug_list, [])
         st.markdown("#####  :pill: :candy: :broccoli: :tea: :mushroom: :snowflake: :smoking: :horse_racing::syringe: :wine_glass:")
 
     with col2:
-        st.markdown("### ② **Choose harm categories:**")
+        st.markdown(f"### ② **{lab_names[2]}:**")
         sel_categories = st.multiselect("",categories_list, [])
 
     if substances and len(substances)>1:
@@ -85,7 +86,7 @@ def main():
     chart_placeholder.altair_chart(fig, use_container_width=True)
 
 
-    foot = '#### A project by  [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
+    foot = f'#### {lab_names[3]}  [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
     st.markdown(foot, unsafe_allow_html=True)
 
 if __name__ == "__main__":
