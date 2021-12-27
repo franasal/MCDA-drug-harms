@@ -10,17 +10,17 @@ lang="ES"
 def load_data(lang):
     path_ = "./data/lang"
 
-    labels_df = pd.read_csv(os.path.join(path_, "label_names.csv"), sep = '\t')
+    labels_df = pd.read_csv(os.path.join(path_, "label_names.tsv"), sep = '\t')
 
     indexes = labels_df[f'{lang}_VARIABLE'].dropna().tolist()
     col_names = labels_df[f'{lang}_DRUG'].dropna().tolist()
     lab_names = labels_df[f'{lang}_LABELS'].dropna().tolist()
 
-    data = pd.read_csv(os.path.join(path_, "input_table.csv"), header=None, sep = '\t').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
+    data = pd.read_csv(os.path.join(path_, "input_table.tsv"), header=None, sep = '\t').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
 
     data.index = list(indexes)
     data.reset_index(inplace=True)
-    descriptions = pd.read_csv(os.path.join(path_, "descriptions.csv"), sep = '\t')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
+    descriptions = pd.read_csv(os.path.join(path_, "descriptions.tsv"), sep = '\t')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
 
 
     return data.drop(16).T, descriptions, lab_names
