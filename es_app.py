@@ -8,18 +8,19 @@ from pathlib import Path
 lang="ES"
 
 def load_data(lang):
-    path_ = "./data/Input_drug_scores_Mulit_lan.xlsx"
+    path_ = "./data/lang"
 
-    labels_df=pd.read_excel(path_, sheet_name=1)
+    labels_df = pd.read_csv(os.path.join(path_, "label_names.csv"), sep = '\t')
 
-    indexes=labels_df[f'{lang}_VARIABLE'].dropna().tolist()
-    col_names=labels_df[f'{lang}_DRUG'].dropna().tolist()
-    lab_names=labels_df[f'{lang}_LABELS'].dropna().tolist()
+    indexes = labels_df[f'{lang}_VARIABLE'].dropna().tolist()
+    col_names = labels_df[f'{lang}_DRUG'].dropna().tolist()
+    lab_names = labels_df[f'{lang}_LABELS'].dropna().tolist()
 
-    data=pd.read_excel(path_ , header=None, sheet_name='input_table').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
+    data = pd.read_csv(os.path.join(path_, "input_table.csv"), header=None, sep = '\t').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
+
     data.index = list(indexes)
     data.reset_index(inplace=True)
-    descriptions = pd.read_excel(path_,sheet_name='descriptions')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
+    descriptions = pd.read_csv(os.path.join(path_, "descriptions.csv"), sep = '\t')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
 
 
     return data.drop(16).T, descriptions, lab_names
@@ -38,11 +39,11 @@ transposed_df.drop('weight', inplace=True)
 def create_plot(sel_substances, sel_categories):
 
     plot_selection = transposed_df.loc[sel_substances, sel_categories]
-    melted_df=pd.melt(plot_selection.reset_index(), id_vars=['index'])
+    melted_df = pd.melt(plot_selection.reset_index(), id_vars=['index'])
     return melted_df
 
 def main():
-    drug_list=sorted(transposed_df.index.tolist())
+    drug_list = sorted(transposed_df.index.tolist())
     categories_list = sorted(transposed_df.columns.tolist()[1:])
     intro_markdown = Path(f"{lang.lower()}_info.md").read_text()
     st.markdown(intro_markdown, unsafe_allow_html=True)
@@ -66,7 +67,7 @@ def main():
     if sel_categories:
         categories_list = [x for x in sel_categories]
 
-        descripts= "\n\n".join([f"**{cat}** \n {categories[cat][f'{lang}_DESCRIPTION']}" for cat in sel_categories])
+        descripts = "\n\n".join([f"**{cat}** \n {categories[cat][f'{lang}_DESCRIPTION']}" for cat in sel_categories])
 
         descr_placeholder = st.empty()
         descr_placeholder.info(descripts)
