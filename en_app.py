@@ -5,44 +5,50 @@ import json
 import altair as alt
 from pathlib import Path
 
+lang="EN"
 
-def load_data():
-    path_ = "./data/Input_criterion_weights_and_drug_scores_Mulit_lan.xlsx"
-    dataset = pd.read_excel(path_, sheet_name=0)
-    descriptions = pd.read_excel(path_, sheet_name=1).to_dict("series")
-    categories = {descriptions[x][0]:[descriptions[x][1], x]for x in descriptions}
+def load_data(lang):
+    path_ = "./data/Input_drug_scores_Mulit_lan.xlsx"
 
-    return dataset.drop(16).T, categories
+    labels_df=pd.read_excel(path_, sheet_name=1)
+
+    indexes=labels_df[f'{lang}_VARIABLE'].dropna().tolist()
+    col_names=labels_df[f'{lang}_DRUG'].dropna().tolist()
+
+    data=pd.read_excel(path_ , header=None, sheet_name='input_table').rename(index=str, columns=labels_df[f'{lang}_DRUG'])
+    data.index = list(indexes)
+    data.reset_index(inplace=True)
+    descriptions = pd.read_excel(path_,sheet_name='descriptions')[[f'{lang}_VARIABLE',f'{lang}_VARNAME',f'{lang}_DESCRIPTION']].set_index(f'{lang}_VARIABLE').T.to_dict("series")
 
 
-transposed_2, categories=load_data()
+    return data.drop(16).T, descriptions
 
-transposed_2.columns = transposed_2.iloc[0]
-transposed_2.columns.name = "Category"
-transposed_2.drop('Unnamed: 0', inplace=True)
-transposed_2.drop('weight', inplace=True)
+
+transposed_df, categories=load_data(lang)
+
+transposed_df.columns = transposed_df.iloc[0]
+transposed_df.columns.name = "Category"
+transposed_df.drop('index', inplace=True)
+transposed_df.drop('weight', inplace=True)
 #create stacked bar chart
-drug_list=sorted(transposed_2.index.tolist())
-categories_list = sorted(transposed_2.columns.tolist()[1:])
+
 
 
 def create_plot(sel_substances, sel_categories):
 
-    plot_selection = transposed_2.loc[sel_substances, sel_categories]
+    plot_selection = transposed_df.loc[sel_substances, sel_categories]
     melted_df=pd.melt(plot_selection.reset_index(), id_vars=['index'])
     return melted_df
 
 def main():
-
-    intro_markdown = Path("en_info.md").read_text()
+    drug_list=sorted(transposed_df.index.tolist())
+    categories_list = sorted(transposed_df.columns.tolist()[1:])
+    intro_markdown = Path(f"{lang.lower()}_info.md").read_text()
     st.markdown(intro_markdown, unsafe_allow_html=True)
 
     st.write("##")
 
     col1, col2 = st.columns(2)
-
-    end_drug_list = drug_list
-    end_categories_list = categories_list
 
     with col1:
         st.markdown("###  ① ** Pick some Drugs: **")
@@ -52,21 +58,21 @@ def main():
 
     with col2:
         st.markdown("### ② **Choose harm categories:**")
-        sel_categories = st.multiselect("",categories.keys(), [])
+        sel_categories = st.multiselect("",categories_list, [])
 
     if substances and len(substances)>1:
-        end_drug_list = substances
+        drug_list = substances
     if sel_categories:
-        end_categories_list = [categories[x][1] for x in sel_categories]
+        categories_list = [x for x in sel_categories]
 
-        descripts= "\n\n".join([f"**{cat}** \n {categories[cat][0]}" for cat in sel_categories])
+        descripts= "\n\n".join([f"**{cat}** \n {categories[cat][f'{lang}_DESCRIPTION']}" for cat in sel_categories])
 
         descr_placeholder = st.empty()
         descr_placeholder.info(descripts)
 
 
 
-    fig = alt.Chart(create_plot(end_drug_list, end_categories_list)).mark_bar().encode(
+    fig = alt.Chart(create_plot(drug_list, categories_list)).mark_bar().encode(
         x=alt.X('index', sort='-y', title=None),
         y=alt.Y('sum(value)', title=None),
         color=alt.Color('Category', scale=alt.Scale(scheme='dark2')
