@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(
      page_title="Drug Risks / Riesgos de las Drogas",
      page_icon="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png",
-     layout="centered", #centered wide
+     layout="wide", #centered wide
      initial_sidebar_state="expanded",
      menu_items={
          'Get Help': 'https://github.com/franasal/MCDA-drug-harms',
@@ -14,10 +14,10 @@ st.set_page_config(
  )
 
 #app.py
-import en_app
-import es_app
+import en_app, es_app, de_app
 
 PAGES = {
+    "Deutsch": de_app,
     "English": en_app,
     "Español": es_app
 }
