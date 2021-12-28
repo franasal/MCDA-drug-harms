@@ -1,22 +1,22 @@
-EN_DRUG	EN_VARIABLE	EN_LABELS	ES_DRUG	ES_VARIABLE	ES_LABELS	DE_DRUG	DE_VARIABLE	DE_LABELS
-weight	DRUG SPEC MORT	Pick some Drugs	weight	MORT SPEC DROGA	Elije algunas Drogas	weight	DROGEN MORT 	
-Alcohol	DRUG REL MORT	Select at least two substances	Alcohol	MORT REL DROGA	Selecciona por lo menos dos sustancias	 Alkohol 	DROGEN MORT 	
-Heroin	DRUG SPEC DAMAGE	Choose harm categories	Heroína	DAÑO SPEC DROGA	Selecciona categorí­as de Riesgos	 Heroin 	DROGENSPE SCHAD 	
-Crack	DRUG REL DAMAGE	A project by	Crack	DAÑO REAL DROGA	Un proyecto desarrollado por	 Crack 	DROGENBED SCHADEN 	
-Methylamphet	DEPENDENCE		Methylamfet	DEPENDENCIA		 Methylamphet 	ABHÄNGIGKEIT 	
-Cocaine	SPEC IMPAIR MENT FUN		Cocaína	DETERIORO FUN MENT ESP		 Kokain 	DROGENSPE GEIST LEISTUNGS 	
-Tobacco	REL IMPAIR MENT FUNC		Tabaco	DETERIORO FUNC REAL		 Tabak 	DROGENBED GEIST LEISTUNGS 	
-Amphetamine	LOSS OF TANGIBLES		Anfetamina	PERD MAT		 Amphetamin 	VERLUST SACHWERTEN 	
-Cannabis	LOSS OF RELAT		Cannabis	PERD RELAC		 Cannabis 	VERLUST BEZIEHUNGEN 	
-GHB	INJURY		GHB	LESIÓN		 GHB 	VERLETZUNG 	
-Benzodiazepines	CRIME		Benzodiazepinas	CRIMEN		 Benzodiazepine 	KRIMINLITÄT 	
-Ketamine	ENVIRONM DAMAGE		Ketamina	DAÑO AMBIENTAL		 Ketamin 	UMWELTSCHÄDEN 	
-Methadone	FAMILY ADVERSITIES		Metadona	ADVERSIDADES FAMIL		 Methadon 	FAMILIENWIDERSTÄNDE 	
-Mephedrone	INTERNATIONAL DAMAGE		Mefedrona	DAÑO INTERNACIONAL		 Mephedron 	INTERNATIONAL DAMAGE 	
-Butane	ECONOMIC COST		Butano	COSTO ECONÓMICO		 Butan 	WIRTS. KOSTEN 	
-Khat	COMMUNITY		Khat	DAÑO COMUNIDAD		 Khat 	GEMIENSCHAFT	
-Anabolic Steroids	[Scales]		Esteroídes Anabólicos	[Scales]		 Anabolika 	[Scales]	
-Ecstasy			Éxtasis			 Ecstasy 		
-LSD			LSD			 LSD 		
-Buprenorphine			Buprenorfina			 Buprenorphin 		
-Mushrooms			Hongos Halucinógenos			 Pilze		
+"EN_DRUG"	"EN_LABEL"	"ES_DRUG"	"ES_LABEL"	"DE_DRUG"	"DE_LABEL"
+"weight"	"Pick some Drugs"	"weight"	"Elije algunas Drogas"	"weight"	
+"Alcohol"	"Select at least two substances"	"Alcohol"	"Selecciona por lo menos dos sustancias"	" Alkohol "	
+"Heroin"	"Choose harm categories"	"Heroína"	"Selecciona categorí­as de Riesgos"	" Heroin "	
+"Crack"	"A project by"	"Crack"	"Un proyecto de"	" Crack "	
+"Methylamphet"		"Methylamfet"		" Methylamphet "	
+"Cocaine"		"Cocaína"		" Kokain "	
+"Tobacco"		"Tabaco"		" Tabak "	
+"Amphetamine"		"Anfetamina"		" Amphetamin "	
+"Cannabis"		"Cannabis"		" Cannabis "	
+"GHB"		"GHB"		" GHB "	
+"Benzodiazepines"		"Benzodiazepinas"		" Benzodiazepine "	
+"Ketamine"		"Ketamina"		" Ketamin "	
+"Methadone"		"Metadona"		" Methadon "	
+"Mephedrone"		"Mefedrona"		" Mephedron "	
+"Butane"		"Butano"		" Butan "	
+"Khat"		"Khat"		" Khat "	
+"Anabolic Steroids"		"Esteroídes Anabólicos"		" Anabolika "	
+"Ecstasy"		"Éxtasis"		" Ecstasy "	
+"LSD"		"LSD"		" LSD "	
+"Buprenorphine"		"Buprenorfina"		" Buprenorphin "	
+"Mushrooms"		"Hongos Halucinógenos"		" Pilze"	
