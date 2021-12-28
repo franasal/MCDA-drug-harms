@@ -6,7 +6,7 @@ Contributions and suggestions to this project are welcomed.
 You can help us make this educational resource accessible in as many languages as possible.
 To submit a translation:
 
-- Download or copy [this `EN.tsv` table]('/data/lang/EN.tsv') to your local directory
+- Download or copy [this `EN.tsv` table](/data/lang/EN.tsv) to your local directory
 - Translate its contents except the column headers and the first `__loc_dont_modify_` column
 - Save the translation as a `.tsv` (tab separated) file named as `[LAN].tsv` (i.e. ES.TSV for the Spanish version)
   - Send it to bot@mybrainmychoice.de, or
