@@ -17,7 +17,7 @@ st.set_page_config(
 import en_app, es_app, de_app
 
 PAGES = {
-    "Deutsch": de_app,
+    # "Deutsch": de_app,
     "English": en_app,
     "Español": es_app
 }
