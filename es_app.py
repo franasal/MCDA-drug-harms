@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 import os
 import json
-import altair as alt
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 lang="ES"
 
@@ -27,18 +27,11 @@ def load_data(lang):
     return data, descriptions, lab_names
 
 
-transposed_df, categories, lab_names=load_data(lang)
-
-
-def create_plot(sel_substances, sel_categories):
-
-    plot_selection = transposed_df.loc[sel_substances, sel_categories]
-    melted_df = pd.melt(plot_selection.reset_index(), id_vars=['index'])
-    return melted_df
+data_df, categories, lab_names=load_data(lang)
 
 def main():
-    drug_list = sorted(transposed_df.index.tolist())
-    categories_list = sorted(transposed_df.columns.tolist())
+    drug_list = sorted(data_df.index.tolist())
+    categories_list = sorted(data_df.columns.tolist())
     intro_markdown = Path(f"{lang.lower()}_info.md").read_text()
     st.markdown(intro_markdown, unsafe_allow_html=True)
 
@@ -67,19 +60,28 @@ def main():
         descr_placeholder = st.empty()
         descr_placeholder.info(descripts)
 
+    data = data_df.loc[drug_list, categories_list ]
+    plt.style.use(['dark_background'])
+    s = data.sum(axis=1)
+    plot_df=data.T[s.sort_values(ascending=False).index].T
 
+    fig = plt.figure()
+    ax = fig.add_axes((0, 0, 1, 1))
+    plot_df.plot(ax=ax,kind='bar', stacked=True, rot=0)
+    vals = ax.get_yticks()
+    ax.xaxis.grid(False)
+    ax.yaxis.grid(linestyle='-.', linewidth=.5)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_visible(False)
+    plt.xticks(rotation = 70, ha="right")
+    plt.title(f"{lab_names['__graph_tittle']}")
 
-    fig = alt.Chart(create_plot(drug_list, categories_list)).mark_bar().encode(
-        x=alt.X('index', sort='-y', title=None),
-        y=alt.Y('sum(value)', title=None),
-        color=alt.Color('Category', scale=alt.Scale(scheme='dark2')
-         )
-        ).configure_legend(orient='bottom', columns=5, labelFontSize=10)
-
-
-    # st.altair_chart(fig, use_container_width=True)
+    # Put a legend below current axis
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.3),
+              fancybox=True, shadow=True, ncol=3)
     chart_placeholder = st.empty()
-    chart_placeholder.altair_chart(fig, use_container_width=True)
+    chart_placeholder.pyplot(plt, use_container_width=True)
 
 
     foot = f'#### {lab_names["__foot"]}  [<img src="https://pbs.twimg.com/media/FGE5sFPX0AY6TtV?format=png&name=small"  alt="drawing" width="50"/>](https://mybrainmychoice.de/) [<img src="https://pbs.twimg.com/media/FGGjxH-XIAc101E?format=jpg&name=small" alt="drawing" width="50"/>](https://youthrise.org/) & [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/> ViewsOnDrugs](https://twitter.com/ViewsOnDrugsBot/)'
