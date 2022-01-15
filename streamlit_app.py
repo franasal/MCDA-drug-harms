@@ -9,7 +9,7 @@ st.set_page_config(
      menu_items={
          'Get Help': 'https://github.com/franasal/MCDA-drug-harms',
          'Report a bug': "https://github.com/franasal/MCDA-drug-harms",
-         'About': "### Author: [franasa](https://twitter.com/franarsa/). \n @ViewsOnDrugsBot "
+         'About': "### Author: [franasa](https://twitter.com/franarsal/). \n @ViewsOnDrugsBot "
      }
  )
 

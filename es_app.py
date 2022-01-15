@@ -12,7 +12,7 @@ def load_data(lang):
     path_ = "./data/lang"
 
     lang_df = pd.read_csv(os.path.join(path_, f"{lang}.tsv"), sep = '\t')
-    descriptions = lang_df[['VARIABLE','VARNAME','DESCRIPTION']].dropna().set_index('VARIABLE').T.to_dict("series")
+    descriptions = lang_df[['VARIABLE','VARNAME','DESCRIPTION']].dropna().set_index('VARNAME').T.to_dict("series")
     lab_names = lang_df[[f'__loc_dont_modify_', 'LABEL']].dropna().set_index('__loc_dont_modify_').to_dict()['LABEL']
     indexes=descriptions.keys()
     col_names = lang_df['DRUG'].dropna().tolist()
