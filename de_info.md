@@ -5,7 +5,7 @@
 
 
 
-Diese Bildungs-App untersucht Daten aus einer  ***[Forschungsarbeit](https://www.drugscience.org.uk/drug-harms-in-the-uk/) von David J. Nutt et al. 2010[*** , in der die verschiedenen Schäden von Drogen bewertet werden, die im Vereinigten Königreich in der Freizeit konsumiert werden, und zwar mithilfe der multikriteriellen Entscheidungsanalyse (MCDA) – einer Methode, die das Wissen und die Erfahrung relevanter Experten nutzt, um die tatsächlichen Auswirkungen zu bewerten und relative Schäden.
+Diese Bildungs-App untersucht Daten aus einer  ***[Forschungsarbeit](https://www.drugscience.org.uk/drug-harms-in-the-uk/) von David J. Nutt et al. 2010***, in der die verschiedenen Schäden von Drogen bewertet werden, die im Vereinigten Königreich in der Freizeit konsumiert werden, und zwar mithilfe der multikriteriellen Entscheidungsanalyse (MCDA) – einer Methode, die das Wissen und die Erfahrung relevanter Experten nutzt, um die tatsächlichen Auswirkungen zu bewerten und relative Schäden.
 
 Das Papier und den Datensatz finden Sie [hier](https://drugscience.org.uk/wp-content/uploads/2010/04/MCDA_Lancet_1-11-10.pdf) und im obigen Link.
 
