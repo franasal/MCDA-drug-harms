@@ -1,21 +1,21 @@
-"__loc_dont_modify_"	"LABEL"	"DRUG"	"VARIABLE"	"VARNAME"	"DESCRIPTION"
-"__select_d_title"	"Such dir ein paar Drogen aus"	" Alkohol "	"DROGEN MORT"	"Drogenspezifische Mortalität"	"Intrinsische Letalität des Arzneimittels, ausgedrückt als Verhältnis der tödlichen Dosis zur Standarddosis (für Erwachsene)"
-"__select_d_subt"	"Wählt mindestens zwei Stoffe aus"	" Heroin "	"DROGENBED MORT"	"Drogenbedingte Mortalität"	"Das Ausmaß, in dem das Leben durch den Konsum der Droge verkürzt wird (ohne drogenspezifische Mortalität) – z. B. Verkehrsunfälle, Lungenkrebs, HIV, Selbstmord"
-"__select_c_title"	"Schadenskategorien auswählen"	" Crack "	"DROGENSPE SCHAD"	"Drogenspezifischer Schaden"	"Arzneimittelspezifische Schädigung der körperlichen Gesundheit – z. B. Leberzirrhose, Krampfanfälle, Schlaganfälle, Kardiomyopathie, Magengeschwüre "
-"__select_c_subt"	"Wählt eine oder mehrere Kategorien aus"	" Methylamphet "	"DROGENBED SCHADEN"	"Drogenbedingte Schäden"	" Arzneimittelbedingte Schädigung der körperlichen Gesundheit, einschließlich Folgen von z und Schäden durch Schneidstoffe "
-"__foot"	"von:"	" Kokain "	"ABHÄNGIGKEIT"	"Abhängigkeit"	" Ausmaß, in dem ein Medikament trotz negativer Folgen (ICD 10 oder DSM IV) eine Neigung oder einen Drang zur Fortsetzung des Konsums hervorruft (ICD 10 oder DSM IV). "
-		" Tabak "	"DROGENSPE GEIST LEISTUNGS"	"Drogenspezifische Beeinträchtigung der geistigen Leistungsfähigkeit"	" Drogenbedingte Beeinträchtigung der geistigen Leistungsfähigkeit – z. B. Stimmungsstörungen infolge des Lebensstils oder des Drogenkonsums von Drogenkonsumenten "
-		" Amphetamin "	"DROGENBED GEIST LEISTUNGS"	"Drogenbedingte Beeinträchtigung der geistigen Leistungsfähigkeit"	"Drogenbedingte Schäden an der körperlichen Gesundheit, einschließlich Folgen von beispielsweise sexuellen unerwünschten Aktivitäten und Selbstverletzung, durch Blut übertragene Viren, Emphyseme und Schäden durch Schneidstoffe"
-		" Cannabis "	"VERLUST SACHWERTEN"	"Verlust von Sachwerten"	" Ausmaß des Verlusts materieller Dinge (z. B. Einkommen, Wohnung, Arbeitsplatz, Bildungsabschlüsse, Vorstrafen, Inhaftierung) "
-		" GHB "	"VERLUST BEZIEHUNGEN"	"Verlust von Beziehungen"	" Ausmaß des Verlustes der Beziehung zu Familie und Freunden "
-		" Benzodiazepine "	"VERLETZUNG"	"Verletzung"	" Ausmaß, in dem der Konsum einer Droge die Wahrscheinlichkeit von Verletzungen anderer direkt und indirekt erhöht – z. B. Gewalt (einschließlich häuslicher Gewalt), Verkehrsunfall, Schädigung des Fötus, Drogenmissbrauch aste, sekundäre Übertragung von durch Blut übertragenen Viren "
-		" Ketamin "	"KRIMINLITÄT"	"Kriminalität"	" Ausmaß, in dem der Konsum einer Droge direkt oder indirekt (auf Bevölkerungsebene, nicht auf individueller Ebene) eine Zunahme der Erwerbskriminalität (über das Drogenkonsumgesetz hinaus) mit sich bringt oder zu einer Zunahme führt ) "
-		" Methadon "	"UMWELTSCHÄDEN"	"Umweltschäden"	" Ausmaß, in dem der Konsum und die Herstellung eines Medikaments lokal Umweltschäden verursacht – z. B. Giftmüll aus Amfetaminfabriken, weggeworfene Nadeln "
-		" Mephedron "	"FAMILIENWIDERSTÄNDE"	"Familienwiderstände"	" Ausmaß, in dem der Konsum eines Medikaments familiäre Widrigkeiten verursacht – z. Zukunftsaussichten von Kindern, Vernachlässigung von Kindern "
-		" Butan "	"INTERNATIONAL DAMAGE"	"Internationale Schäden"	" Ausmaß, in dem der Konsum einer Droge im Vereinigten Königreich zu internationalen Schäden beiträgt – zB Entwaldung, Destabilisierung von Ländern, internationale Kriminalität, neue Märkte "
-		" Khat "	"WIRTS. KOSTEN"	"Wirtschaftliche Kosten"	" Ausmaß, in dem der Konsum einer Droge direkte Kosten für das Land verursacht (z. B. Gesundheitsversorgung, Polizei, Gefängnisse, Sozialdienste, Zoll, Versicherungen, Kriminalität) und indirekte Kosten (z. B. Produktivitätsverlust, Fehlzeiten) sozialen Zusammenhalt und Verfall des Ansehens der Gemeinschaft"
-		" Anabolika "	"GEMIENSCHAFT"	"Gemeinschaft"	"Ausmaß, in dem der Konsum einer Droge zu einem Rückgang des sozialen Zusammenhalts und des Rufs der Gemeinschaft führt"
-		" Ecstasy "			
-		" LSD "			
-		" Buprenorphin "			
-		" Pilze"			
+__loc_dont_modify_	LABEL	DRUG	VARIABLE	VARNAME	DESCRIPTION
+__select_d_title	Such dir ein paar Drogen aus	Alkohol	DROGENSPE MORT	Drogenspezifische Mortalität	Intrinsische Letalität der Droge ausgedrückt als Verhältnis der tödlichen Dosis zur Standarddosis (für Erwachsene)
+__select_d_subt	Wählt mindestens zwei Substanzen aus	Heroin	DROGENBED MORT	Drogenbedingte Mortalität	Das Ausmaß, in dem das Leben durch den Konsum der Droge verkürzt wird (ohne drogenspezifische Mortalität) – z. B. Verkehrsunfälle, Lungenkrebs, HIV, Selbstmord
+__select_c_title	Schadenskategorien auswählen	Crack	DROGENSPE SCHAD	Drogenspezifische Schäden	Drogenspezifische Schädigung der körperlichen Gesundheit – z. B. Leberzirrhose, Krampfanfälle, Schlaganfälle, Kardiomyopathie, Magengeschwüre 
+__select_c_subt	Wählt eine oder mehrere Kategorien aus	Methylamphet	DROGENBED SCHAD	Drogenbedingte Schäden	Drogenbedingte Schädigung der körperlichen Gesundheit - z.B. ungewollte sexuelle Kontakte, Selbstverletzung, Schäden durch Streckmittel, oder durch Blut übertragene Krankheiten
+__foot	von:	Kokain	ABHÄNGIGKEIT	Abhängigkeit	Ausmaß, in dem eine Droge trotz negativer Folgen einen Drang zur Fortsetzung des Konsums hervorruft (ICD 10 oder DSM IV). 
+__graph_tittle	Schadensvergleich	Tabak	DROGENSPE GEIST GESUND	Drogenspezifische Beeinträchtigung der geistigen Gesundheit	Drogenspezifische Beeinträchtigung der geistigen Gesundheit – z. B. Amphetamin-induzierte Psychosen
+		Amphetamin	DROGENBED GEIST GESUND	Drogenbedingte Beeinträchtigung der geistigen Gesundheit	Drogenbedingte Beeinträchtigung der geistigen Gesundheit – z. B. Stimmungsstörungen infolge der sozialen Umstände die mit Drogenkonsum einhergehen
+		Cannabis	VERLUST SACHWERTE	Verlust von Sachwerten	Ausmaß des Verlusts materieller Dinge (z. B. Einkommen, Wohnung, Arbeitsplatz, Bildungsabschlüsse, Vorstrafen, Inhaftierung) 
+		GHB	VERLUST BEZIEHUNGEN	Verlust von Beziehungen	Ausmaß des Verlustes der Beziehung zu Familie und Freunden 
+		Benzodiazepine	KÖRP VERLETZUNG	Körperliche Verletzung	Ausmaß, in dem der Konsum einer Droge die Wahrscheinlichkeit von Verletzungen anderer direkt und indirekt erhöht – z. B. Gewalt (einschließlich häuslicher Gewalt), Verkehrsunfälle, Schädigung des Fötus, sekundäre Übertragung von durch Blut übertragenen Viren
+		Ketamin	KRIMINLITÄT	Kriminalität	Ausmaß, in dem der Konsum einer Droge direkt oder indirekt (auf Bevölkerungsebene, nicht auf individueller Ebene) eine Zunahme der Erwerbskriminalität mit sich bringt
+		Methadon	UMWELTSCHÄDEN	Umweltschäden	Ausmaß, in dem der Konsum und die Herstellung einer Droge lokal Umweltschäden verursacht – z. B. Giftmüll aus Amphetaminfabriken, weggeworfene Nadeln 
+		Mephedron	FAMILIENPROBLEME	Familienprobleme	Ausmaß, in dem der Konsum einer Droge familiäre Probleme verursacht – z.B. das Auseinanderbrechen von Familien oder Vernachlässigung von Kindern 
+		Butan	INTERNATIONALE SCHÄDEN	Internationale Schäden	Ausmaß, in dem der Konsum einer Droge zu internationalen Schäden beiträgt – zB Entwaldung, Destabilisierung von Ländern, internationale Kriminalität, neue Märkte 
+		Khat	WIRTS. KOSTEN	Wirtschaftliche Kosten	Ausmaß, in dem der Konsum einer Droge direkte Kosten (z. B. Gesundheitsversorgung, Polizei, Gefängnisse, Sozialdienste, Zoll, Versicherungen, Kriminalität) und indirekte Kosten (z. B. Produktivitätsverlust, Fehlzeiten) für das Land verursacht
+		Anabolika	GEMEINSCHAFT	Gemeinschaft	Ausmaß, in dem der Konsum einer Droge zu einem Rückgang des sozialen Zusammenhalts und des Rufs der Gemeinschaft führt
+		Ecstasy			
+		LSD			
+		Buprenorphin			
+		Pilze			

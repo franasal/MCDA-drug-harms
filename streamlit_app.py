@@ -9,7 +9,7 @@ st.set_page_config(
      menu_items={
          'Get Help': 'https://github.com/franasal/MCDA-drug-harms',
          'Report a bug': "https://github.com/franasal/MCDA-drug-harms",
-         'About': "### Author: [franasa](https://twitter.com/franarsal/). \n @ViewsOnDrugsBot "
+         'About': "**App Author: [Francisco Arcila](https://twitter.com/franarsal/)** \n\nConcept design: Philine Edbauer, Francisco Arcila. \n\nTranslations: Philine Edbauer, Lukas Basedow."
      }
  )
 
@@ -17,13 +17,12 @@ st.set_page_config(
 import en_app, es_app, de_app
 
 PAGES = {
-    # "Deutsch": de_app,
+    "Deutsch": de_app,
     "English": en_app,
     "Español": es_app
 }
-vod_icon=' [<img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/>ViewsOnDrugsBot<img src="https://pbs.twimg.com/media/E1_0586WQAYCNym?format=png&name=small" alt="drawing" width="50"/>](https://twitter.com/ViewsOnDrugsBot/)'
+vod_icon=' <img src="https://pbs.twimg.com/profile_images/1396102254487384065/ZjD8GvMw_400x400.png" alt="drawing" width="50"/>   -Know your Drugs-  <img src="https://pbs.twimg.com/media/E1_0586WQAYCNym?format=png&name=small" alt="drawing" width="50"/>'
 st.sidebar.markdown(vod_icon,  unsafe_allow_html=True)
-st.sidebar.markdown("### Language \ Idioma")
 selection = st.sidebar.radio("",list(PAGES.keys()))
 page = PAGES[selection]
 page.main()

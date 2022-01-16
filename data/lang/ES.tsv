@@ -1,21 +1,21 @@
-"__loc_dont_modify_"	"LABEL"	"DRUG"	"VARIABLE"	"VARNAME"	"DESCRIPTION"
-"__select_d_title"	"Elije algunas Drogas"	"Alcohol"	"MORT SPEC DROGA"	"Mortalidad específica de la droga"	"Letalidad intri­nseca de la droga expresada como relacón entre la dosis letal y la dosis estándar (para adultos)"
-"__select_d_subt"	"Selecciona por lo menos dos sustancias"	"Heroína"	"MORT REL DROGA"	"Mortalidad relacionada con la droga"	"La medida en que la vida se acorta por el uso de la droga (excluye la mortalidad específica de la droga), por ejemplo, accidentes de tráfico, cáncer de pulmón, VIH, suicidio."
-"__select_c_title"	"Selecciona categorí­as de Riesgos"	"Crack"	"DAÑO SPEC DROGA"	"Daño específico de la droga"	"Daño específico de un fármaco a la salud fí­sica, p. Ej., Cirrosis, convulsiones, accidentes cerebrovasculares, miocardiopatía, Úceras de estómago"
-"__select_c_subt"	"Selecciona una o más categorias"	"Methylamfet"	"DAÑO REAL DROGA"	"Daño relacionado con la droga"	"Daño a la salud física relacionado con las drogas, incluidas las consecuencias de, por ejemplo, actividades sexuales no deseadas y autolesiones, virus transmitidos por la sangre, enfisema y daño por agentes cortantes"
-"__foot"	"Por:"	"Cocaína"	"DEPENDENCIA"	"Dependencia"	"La medida en que un medicamento crea una propensión o un impulso de continuar usándolo a pesar de las consecuencias adversas (ICD 10 o DSM IV)"
-"__graph_tittle"	"Comparación de riesgos"	"Tabaco"	"DETERIORO FUN MENT ESP"	"Deterioro del funcionamiento mental específico de la droga"	"Deterioro del funcionamiento mental especí­fico de la droga, p. Ej., Psicosis inducida por anfetamina, intoxicación por ketamina"
-		"Anfetamina"	"DETERIORO FUNC REAL"	"Deterioro del funcionamiento mental relacionado con las drogas"	"Deterioro del funcionamiento mental relacionado con las drogas, p. Ej., Trastornos del estado de Ánimo secundarios al estilo de vida de los consumidores de drogas o al consumo de drogas."
-		"Cannabis"	"PERD MAT"	"Perdida material"	"Alcance de la pérdida de cosas tangibles (por ejemplo, ingresos, vivienda, trabajo, logros educativos, antecedentes penales, encarcelamiento)"
-		"GHB"	"PERD RELAC"	"Perdida de las relaciones"	"Grado de pérdida de la relación con familiares y amigos."
-		"Benzodiazepinas"	"LESIÓN"	"Lesión"	"Grado en el que el uso de una droga aumenta la posibilidad de lesiones a otras personas, tanto directa como indirectamente, por ejemplo, violencia (incluida la violencia doméstica), accidente de tráfico, daño fetal, desperdicio de drogas, transmisión secundaria de virus transmitidos por la sangre."
-		"Ketamina"	"CRIMEN"	"Crimen"	"Grado en el que el uso de una droga implica o conduce a un aumento en el volumen de delitos adquisitivos (más allá del acto de uso de drogas) directa o indirectamente (a nivel de población, no a nivel individual)"
-		"Metadona"	"DAÑO AMBIENTAL"	"Daño al medio ambiente"	"Grado en el que el uso y la producción de una droga causan daños ambientales a nivel local, por ejemplo, desechos tóxicos de las fábricas de anfetaminas, agujas desechadas"
-		"Mefedrona"	"ADVERSIDADES FAMIL"	"Adversidades familiares"	"Grado en el que el uso de una droga causa adversidades familiares, p. Ej., Ruptura familiar, bienestar económico, bienestar emocional, perspectivas futuras de los niños, negligencia infantil"
-		"Butano"	"DAÑO INTERNACIONAL"	"Daño internacional"	"Grado en el que el uso de una droga en el Reino Unido contribuye al daño internacional, por ejemplo, deforestación, desestabilización de países, delincuencia internacional, nuevos mercados."
-		"Khat"	"COSTO ECONÓMICO"	"Costo económico"	"Grado en el que el uso de una droga causa costos directos al país (p. Ej., Atención médica, policía, prisiones, servicios sociales, aduanas, seguros, delitos) e indirectos (p. Ej., Pérdida de productividad, ausentismo)"
-		"Esteroídes Anabólicos"	"DAÑO COMUNIDAD"	"Daño a la comunidad"	"Grado en el que el uso de una droga provoca una disminucón de la cohesión social y una disminución de la reputación de la comunidad."
-		"Éxtasis"
-		"LSD"
-		"Buprenorfina"
-		"Hongos Halucinógenos"
+__loc_dont_modify_	LABEL	DRUG	VARIABLE	VARNAME	DESCRIPTION
+__select_d_title	Elije algunas Drogas	Alcohol	MORT SPEC DROGA	Mortalidad específica de la droga	Letalidad intri­nseca de la droga expresada como relacón entre la dosis letal y la dosis estándar (para adultos)
+__select_d_subt	Selecciona por lo menos dos sustancias	Heroína	MORT REL DROGA	Mortalidad relacionada con la droga	La medida en que la vida se acorta por el uso de la droga (excluye la mortalidad específica de la droga), por ejemplo, accidentes de tráfico, cáncer de pulmón, VIH, suicidio.
+__select_c_title	Selecciona categorías de Riesgos	Crack	DAÑO SPEC DROGA	Daño específico de la droga	Daño específico de un fármaco a la salud fí­sica, p. Ej., Cirrosis, convulsiones, accidentes cerebrovasculares, miocardiopatía, Úceras de estómago
+__select_c_subt	Selecciona una o más categorias	Methylamfet	DAÑO REAL DROGA	Daño relacionado con la droga	Daño a la salud física relacionado con las drogas, incluidas las consecuencias de, por ejemplo, actividades sexuales no deseadas y autolesiones, virus transmitidos por la sangre, enfisema y daño por agentes cortantes
+__foot	Por:	Cocaína	DEPENDENCIA	Dependencia	La medida en que un medicamento crea una propensión o un impulso de continuar usándolo a pesar de las consecuencias adversas (ICD 10 o DSM IV)
+__graph_tittle	Comparación de riesgos	Tabaco	DETERIORO FUN MENT ESP	Deterioro del funcionamiento mental específico de la droga	Deterioro del funcionamiento mental especí­fico de la droga, p. Ej., Psicosis inducida por anfetamina, intoxicación por ketamina
+		Anfetamina	DETERIORO FUNC REAL	Deterioro del funcionamiento mental relacionado con las drogas	Deterioro del funcionamiento mental relacionado con las drogas, p. Ej., Trastornos del estado de Ánimo secundarios al estilo de vida de los consumidores de drogas o al consumo de drogas.
+		Cannabis	PERD MAT	Perdida material	Alcance de la pérdida de cosas tangibles (por ejemplo, ingresos, vivienda, trabajo, logros educativos, antecedentes penales, encarcelamiento)
+		GHB	PERD RELAC	Perdida de las relaciones	Grado de pérdida de la relación con familiares y amigos.
+		Benzodiazepinas	LESIÓN	Lesión	Grado en el que el uso de una droga aumenta la posibilidad de lesiones a otras personas, tanto directa como indirectamente, por ejemplo, violencia (incluida la violencia doméstica), accidente de tráfico, daño fetal, desperdicio de drogas, transmisión secundaria de virus transmitidos por la sangre.
+		Ketamina	CRIMEN	Crimen	Grado en el que el uso de una droga implica o conduce a un aumento en el volumen de delitos adquisitivos (más allá del acto de uso de drogas) directa o indirectamente (a nivel de población, no a nivel individual)
+		Metadona	DAÑO AMBIENTAL	Daño al medio ambiente	Grado en el que el uso y la producción de una droga causan daños ambientales a nivel local, por ejemplo, desechos tóxicos de las fábricas de anfetaminas, agujas desechadas
+		Mefedrona	ADVERSIDADES FAMIL	Adversidades familiares	Grado en el que el uso de una droga causa adversidades familiares, p. Ej., Ruptura familiar, bienestar económico, bienestar emocional, perspectivas futuras de los niños, negligencia infantil
+		Butano	DAÑO INTERNACIONAL	Daño internacional	Grado en el que el uso de una droga en el Reino Unido contribuye al daño internacional, por ejemplo, deforestación, desestabilización de países, delincuencia internacional, nuevos mercados.
+		Khat	COSTO ECONÓMICO	Costo económico	Grado en el que el uso de una droga causa costos directos al país (p. Ej., Atención médica, policía, prisiones, servicios sociales, aduanas, seguros, delitos) e indirectos (p. Ej., Pérdida de productividad, ausentismo)
+		Esteroídes Anabólicos	DAÑO COMUNIDAD	Daño a la comunidad	Grado en el que el uso de una droga provoca una disminucón de la cohesión social y una disminución de la reputación de la comunidad.
+		Éxtasis			
+		LSD			
+		Buprenorfina			
+		Hongos Halucinógenos			
