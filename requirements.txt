@@ -3,3 +3,4 @@ six==1.16.0
 tenacity==8.0.1
 openpyxl
 matplotlib
+git+https://github.com/yanirs/streamlit-analytics
